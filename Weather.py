@@ -5,7 +5,7 @@ class Weather():
         self.City=City
 
     def Find_Data(self):
-        URL = "http://............."
+        URL = "http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=c08bb4e703b8852bc8d1b377dcd38f39".format(self.City)
         Data = requests.get(URL).json()
 
         Longitude=Data['coord']['lon']
